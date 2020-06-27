@@ -1,5 +1,6 @@
 import {query} from '../graphql/api';
-import {categoriesRoot, categoryById} from './schema/category';
+import {categoriesRoot, productListByCategoryId} from './schema/category';
 
 export const getRootCategories = () => query(categoriesRoot);
-export const getCategoryById = (data) => query(categoryById, data);
+export const getProductsByCategoryId = (data) =>
+  query(productListByCategoryId, data);
