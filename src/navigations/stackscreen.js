@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 import Home from '../pages/Home';
 import Landingpage from '../pages/Landingpage';
 import Login from '../pages/Login';
+import Category from '../pages/Category';
+import Product from '../pages/Product';
 import Myaccount from '../pages/Myaccount';
 
 const Stack = createStackNavigator();
@@ -57,7 +59,27 @@ const StackScreen = ({auth}) => {
               headerShown: true,
             }}
           />
-          <Tab.Screen name="Profile" component={Myaccount} />
+          <Tab.Screen
+            name="Category"
+            component={Category}
+            options={{
+              title: 'Category',
+            }}
+          />
+          <Tab.Screen
+            name="Product"
+            component={Product}
+            options={{
+              title: 'Category',
+            }}
+          />
+          <Tab.Screen
+            name="Profile"
+            component={Myaccount}
+            options={{
+              headerShown: true,
+            }}
+          />
         </Tab.Navigator>
       );
     }
